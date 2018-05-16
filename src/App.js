@@ -1,18 +1,21 @@
+//The import statement is used to import bindings
+//which are exported by another module. The import
+//keyword imports a JavaScript entity that was
+//exported (using the export keyword) in another
+//file. Webpack uses import commands to determine
+//which scripts and assets to bundle
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import ToDo from './components/ToDo.js';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+        <ul>
+          <ToDo />
+          <ToDo />
+        </ul>
       </div>
     );
   }
